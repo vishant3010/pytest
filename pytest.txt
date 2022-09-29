@@ -1,0 +1,124 @@
+pytest
+==================
+
+it is a testing framework based on python
+
+it is used to write test caes
+
+
+naming convention
+====================
+
+test case file name should start with test
+
+test case method must start with test
+
+execute using pytest
+
+
+note - if we change method name from test to somthng else
+       then it will not execute / work
+
+
+name of method must start with test
+
+
+# we can write multiple test cases in a single file
+
+
+
+# we can skip execution of  any par test case
+
+
+# if we want to skip part method 
+
+
+conditionally skip particulr method
+
+
+# for more details we need to use verbose 
+# -v - verbose 
+
+#  -v
+
+
+# for execution
+
+we need to write 
+
+pytest -v
+
+
+# we can pass any substring
+
+# it will execute those test cases which contain sub string
+
+
+
+#define sanity nd smoke test cases
+
+
+
+# execute particulr group
+pytest -m smoke
+pytest -m sanity
+
+
+
+# pytest fixtures
+=============================
+
+
+execute somthing before test cases
+
+for this we can create fixtures
+
+so that it can execute before each methods
+
+
+in this method browser is opning again nd again
+
+
+but if want that browsr will start only once 
+
+scope = "module"
+
+
+if want to execute somthng aftr executn of methods
+
+we have to use yield
+
+
+
+
+
+
+
+genrate alllure report
+---------------------
+allure generate C:\Users\dell\Desktop\end_to_end\reports --clean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

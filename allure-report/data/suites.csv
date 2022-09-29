@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Sep 16 20:30:46 IST 2022","Fri Sep 16 20:30:50 IST 2022","4587","","test_linkidin","","","","test_signin",""
+"broken","Fri Sep 16 20:30:50 IST 2022","Fri Sep 16 20:30:50 IST 2022","135","","test_linkidin","","","","test_valid_login",""
+"broken","Fri Sep 16 20:30:52 IST 2022","Fri Sep 16 20:30:52 IST 2022","6","","test_linkidin","","","","test_skip",""
+"passed","Fri Sep 16 20:30:41 IST 2022","Fri Sep 16 20:30:46 IST 2022","4612","","test_linkidin","","","","test_main",""

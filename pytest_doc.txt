@@ -1,0 +1,230 @@
+naming convention in pytest
+--------------------------------
+
+
+test case file name should start with test
+
+test case method name should start with test
+
+execute testcases using pytest
+
+
+1. if we changes method name from test to somthng else 
+   then it will throw error
+
+name of method must start with test
+
+
+
+pytest test cases
+=========================
+
+write multiple test cases in single file
+
+skip execution of any specific test case
+
+
+if want to skip particulr method
+
+write this code
+----------------------
+@pytest.mark.skip("dont want to execute on currnt build")
+
+
+
+conditionally skip execution
+-----------------------------
+
+
+this will not skip anything
+------------
+a = 100
+
+@pytest.mark.skipif(a>100,reason="dont want to execute on currnt build")
+
+we need to use / write pytest -v
+
+-v verbose - for more information
+
+
+this will skip
+------------------
+
+a = 100
+
+@pytest.mark.skipif(a>100,reason="dont want to execute on currnt build")
+
+
+
+execute any specific test case
+-----------------------------------
+
+-k test_reg_invalid
+
+
+we can pass substring
+---------------------------
+
+if we write case in above method
+then it will execute only those which contain case (string)
+
+
+
+display detailed result
+
+
+
+
+part 2
+===================================
+
+
+group test cases together
+---------------------------------
+
+
+smoke , sanity
+@pytest.mark.Smoke
+@pytest.mark.Sanity
+
+for execution
+--------------------
+
+
+execute particulr group
+pytest -m Smoke
+pytest -m Sanity
+
+
+execute specific group 
+
+
+execute all other than specific group
+
+pytest -m "not Smoke"
+
+
+
+
+pytest fixtures
+======================
+
+
+execute somthing before testcases
+
+------------
+
+
+in this case path line is executed in each method
+---------------------------
+
+for this we can create fixtures
+
+so that it can execute before each methods
+
+
+execute after testcases
+--------------------------
+
+after each test case we need to close my
+browser
+
+@pytest.fixture()
+def set_path():
+    global driver
+    path = r"C:\driver\chromedriver.exe"
+    driver = Chrome(executable_path=path)
+    yield
+    driver.close()
+
+
+whatevr we write after yield
+it will execute after testcases
+
+in above method browser is opning 
+again and again
+
+but if i want that browers will 
+start only once
+
+and execute test all cases
+then clse the browser
+
+
+execute only once
+====================
+
+@pytest.fixture(scope = "module)
+def set_path():
+    global driver
+    path = r"C:\driver\chromedriver.exe"
+    driver = Chrome(executable_path=path)
+    yield
+    driver.close()
+
+
+
+
+
+part 3 ----  pytest assertion
+==========================
+
+assertion are used to compare actual result with
+expected result
+
+
+to make assertion we can use assert in pytest
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
